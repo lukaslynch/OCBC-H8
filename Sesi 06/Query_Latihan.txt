@@ -1,0 +1,80 @@
+CREATE database db_Staff;
+
+USE db_Staff;
+CREATE table tb_data_staff( 
+	id_staff int primary key identity(1,1),
+	nik varchar (10),
+	nama varchar (50),
+	alamat varchar(100),
+	handphone varchar(15)
+);
+
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10001','Agus','Jakarta','0819');
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10002','Rossa','Bandung','0819');
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10003','Jon','Surabaya','0819');
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10004','Jenn','Jakarta','0819');
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10005','Alan','Batam','0819');
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
+VALUES('10006','Zack','Bandung','0819');
+
+ALTER TABLE tb_data_staff ADD joindate varchar(4);
+INSERT INTO tb_data_staff(nik, nama, alamat, handphone, joindate)
+VALUES('10007','Oliver','Bali','0819', '2010');
+
+SELECT * FROM tb_data_staff;
+
+SELECT TOP 2 * FROM tb_data_staff;
+
+SELECT TOP 3 * FROM tb_data_staff;
+
+CREATE table tb_outsource_staff( 
+	id_staff int primary key identity(1,1),
+	nik varchar (10),
+	nama varchar (50),
+	alamat varchar(100),
+	handphone varchar(15),
+	joindate varchar(4)
+);
+
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20001', 'Ujang', 'Karawang', '0264', '2019');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20002', 'Dewi', 'Purwakarta', '0264', '2020');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20003', 'Betha', 'Depok', '0264', '2015');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20004', 'Sondakh', 'Karawang', '0264', '2016');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20005', 'Iman', 'Purwakarta', '0264', '2019');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20006', 'Teddy', 'Cimahi', '0264', '2017');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20007', 'Lion', 'Bekasi', '0264', '2017');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20008', 'Dwi', 'Bekasi', '0264', '2018');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20009', 'Friska', 'Tangerang', '0264', '2020');
+INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
+VALUES('20010', 'Octopus', 'Jakarta', '0264', '2010');
+
+SELECT * FROM tb_outsource_staff;
+
+SELECT TOP 2 * FROM tb_outsource_staff WHERE joindate;
+
+SELECT * FROM tb_data_staff a 
+RIGHT JOIN tb_outsource_staff b 
+ON a.joindate = b.joindate;
+
+SELECT * FROM tb_data_staff a
+LEFT JOIN tb_outsource_staff b 
+ON a.joindate = b.joindate;
+
+SELECT * FROM tb_data_staff a 
+FULL JOIN tb_outsource_staff b 
+ON a.joindate = b.joindate;
+
