@@ -1,0 +1,16 @@
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.csproj.AssemblyReference.cache
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.GeneratedMSBuildEditorConfig.editorconfig
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.AssemblyInfoInputs.cache
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.AssemblyInfo.cs
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.csproj.CoreCompileInputs.cache
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.exe
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.deps.json
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.runtimeconfig.json
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.runtimeconfig.dev.json
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.dll
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\ref\oop.dll
+D:\OCBC\Sesi 05\oop\bin\Debug\net5.0\oop.pdb
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.dll
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\ref\oop.dll
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.pdb
+D:\OCBC\Sesi 05\oop\obj\Debug\net5.0\oop.genruntimeconfig.cache
