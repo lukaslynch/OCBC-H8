@@ -1,5 +1,7 @@
+--A
 CREATE database db_Staff;
 
+--B
 USE db_Staff;
 CREATE table tb_data_staff( 
 	id_staff int primary key identity(1,1),
@@ -9,6 +11,7 @@ CREATE table tb_data_staff(
 	handphone varchar(15)
 );
 
+--C & D
 INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
 VALUES('10001','Agus','Jakarta','0819');
 INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
@@ -22,16 +25,21 @@ VALUES('10005','Alan','Batam','0819');
 INSERT INTO tb_data_staff(nik, nama, alamat, handphone)
 VALUES('10006','Zack','Bandung','0819');
 
+--E
 ALTER TABLE tb_data_staff ADD joindate varchar(4);
 INSERT INTO tb_data_staff(nik, nama, alamat, handphone, joindate)
 VALUES('10007','Oliver','Bali','0819', '2010');
 
 SELECT * FROM tb_data_staff;
 
+--F
 SELECT TOP 2 * FROM tb_data_staff;
 
+--G
 SELECT TOP 3 * FROM tb_data_staff;
 
+
+--H
 CREATE table tb_outsource_staff( 
 	id_staff int primary key identity(1,1),
 	nik varchar (10),
@@ -41,6 +49,7 @@ CREATE table tb_outsource_staff(
 	joindate varchar(4)
 );
 
+--I
 INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
 VALUES('20001', 'Ujang', 'Karawang', '0264', '2019');
 INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
@@ -62,19 +71,25 @@ VALUES('20009', 'Friska', 'Tangerang', '0264', '2020');
 INSERT INTO tb_outsource_staff(nik, nama, alamat, handphone, joindate)
 VALUES('20010', 'Octopus', 'Jakarta', '0264', '2010');
 
-SELECT * FROM tb_outsource_staff;
+--J
+SELECT * FROM tb_data_staff a JOIN tb_outsource_staff b 
+ON a.joindate = b.joindate WHERE a.joindate = b.joindate;
 
-SELECT TOP 2 * FROM tb_outsource_staff WHERE joindate;
-
+--K
 SELECT * FROM tb_data_staff a 
 RIGHT JOIN tb_outsource_staff b 
 ON a.joindate = b.joindate;
 
+--L
 SELECT * FROM tb_data_staff a
 LEFT JOIN tb_outsource_staff b 
 ON a.joindate = b.joindate;
 
+--M
 SELECT * FROM tb_data_staff a 
 FULL JOIN tb_outsource_staff b 
 ON a.joindate = b.joindate;
 
+SELECT * FROM tb_data_staff
+UNION ALL
+SELECT * FROM tb_outsource_staff;
