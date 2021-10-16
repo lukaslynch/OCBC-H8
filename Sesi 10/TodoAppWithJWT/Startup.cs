@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.UI;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
 
 namespace TodoAppWithJWT
 {
@@ -58,7 +59,7 @@ namespace TodoAppWithJWT
                     RequireExpirationTime = false
                 } ;
             });
-            services.AddDefaultIdentity<IdentityDbContext>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                         .AddEntityFrameworkStores<ApiDbContext>();
 
             services.AddControllers();
