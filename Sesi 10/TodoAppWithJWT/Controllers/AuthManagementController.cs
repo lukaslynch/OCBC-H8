@@ -30,8 +30,9 @@ namespace TodoAppWithJWT.Controllers
             _jwtConfig = optionsMonitor.CurrentValue;
         }
 
-        [HttpPost]
-        [Route("Register")]
+        [HttpPost("Register")]
+        //[HttpPost]
+        //[Route("Register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationDto user)
         {
             if(ModelState.IsValid)
@@ -75,9 +76,9 @@ namespace TodoAppWithJWT.Controllers
             });
         }
 
-
-        [HttpPost]
-        [Route("Login")]
+        [HttpPost("Login")]
+        //[HttpPost]
+        //[Route("Login")]
         public async Task<IActionResult> Login([FromBody] UserLoginRequest user)
         {
             if(ModelState.IsValid)

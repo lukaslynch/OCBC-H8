@@ -92,10 +92,5 @@ namespace TodoAppWithJWT.Controllers
 
             return Ok(existItem);
         }
-
-        public ActionResult TestRun()
-        {
-            return Ok("success");
-        }
     }
 }
