@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TlYtEsRfHBXRx+9tANOyUw8Qp8URr00AXTIGMOlN3CCDWxBB5TxHVR3/e5tAUpz4OuZSrzWKiL8/aiAq23qmSQ==",
+  "dgSpecHash": "7zOMlZb2A4h3UoYtitzAF2h9B6BTia4wHuG+vL9IwaHPP51gfOJaeMu27+i44mkGf1/vZzmCLTofxmzifBATFw==",
   "success": true,
-  "projectFilePath": "D:\\OCBC\\Sesi 10\\TodoApp\\TodoApp.csproj",
+  "projectFilePath": "D:\\OCBC\\EmptyProject\\ToDoApp\\TodoApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
