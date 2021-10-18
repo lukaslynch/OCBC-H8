@@ -168,7 +168,7 @@ namespace TodoAppWithJWT.Controllers
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 }),
-                Expires = DateTime.UtcNow.AddSeconds(30),
+                Expires = DateTime.UtcNow.AddHours(6),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -182,7 +182,7 @@ namespace TodoAppWithJWT.Controllers
                 IsRevoked = false,
                 UserId = user.Id,
                 AddedDate = DateTime.UtcNow,
-                ExpiryDate = DateTime.UtcNow.AddSeconds(30),
+                ExpiryDate = DateTime.UtcNow.AddSeconds(35),
                 Token = RandomString(35) + Guid.NewGuid()
             };
 
