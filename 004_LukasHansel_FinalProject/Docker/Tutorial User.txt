@@ -1,0 +1,92 @@
+Panduan pengguna singkat padat dan jelas untuk user.
+#created by Lukas Hansel Ganda - FSDO001ONL004
+
+Ada 3 cara untuk menggunakan API ini.
+1. Docker + database online remote MySQL
+2. Local + database offline MySQL
+3. Heroku + database online remote MySQL
+# kami menyarankan anda menggunakan no 3 karena mudah dan tidak ribet.
+
+Jika anda memakai nomor 1. silahkan file tempat project berada dan buka solution lalu run 
+docker, container dan images akan otomatis ter-generate, browser default akan otomatis 
+terbuka dan langsung menuju path swagger dengan pemilihan port oleh docker.
+
+Jika anda memakai nomor 2. Jalankan MySQL via XAMPP lalu buka git bash pada lokasi folder
+project, jalankan perintah "dotnet ef database update" lalu jalankan perintah dotnet watch
+run, browser default anda akan terbuka dan langsung menuju path swagger dengan port 5001
+
+Jika anda memakai nomor 3. Buka postman anda, import file postman_collection.json
+klik collection method ayng diinginkan dan ubah request body / header sesuai kebutuhan.
+Aplikasi ini sudah diuji pada postman, file screenshot terlampir.
+
+Ini adalah daftar path / link beserta body untuk 
+melakukan request kepada server, jangan lupa request body berbentuk json.
+Silahkan buka browser kesayangan anda.
+--------------------------------------------------------------------------------------------
+# Untuk melakukan register.
+https://finalproject1ocbch8.herokuapp.com/api/AuthManagement/Register
+{
+  "username": "string",
+  "email": "user@example.com",
+  "password": "string"
+}
+--------------------------------------------------------------------------------------------
+# Untuk melakukan login.
+https://finalproject1ocbch8.herokuapp.com/api/AuthManagement/login
+{
+  "email": "heroku899@ocbc.com",
+  "password": "Password12345!"
+}
+--------------------------------------------------------------------------------------------
+# Untuk melakukan refresh token. (Validasi dan return masih perlu diperbaiki karena
+jika token dan refresh token di request yang masih aktif hanya akan mereturn 
+"Token belum expired" sedangkan jika token sudah expired akan mereturn "Token has 
+expired please re-login" seharusnya mereturn token baru.)
+
+https://finalproject1ocbch8.herokuapp.com/api/AuthManagement/refreshtoken
+{
+  "token": "string",
+  "refreshToken": "string"
+}
+--------------------------------------------------------------------------------------------
+
+UNTUK SELANJUTNYA SELALU DIPERLUKAN request header berupa authorization bearer berisi 
+token yang didapatkan setelah login, token ini berbatas waktu, jika mendapat response
+"Token sudah expired" silahkan melakukan login ulang.
+
+--------------------------------------------------------------------------------------------
+# Untuk mengambil semua data
+https://finalproject1ocbch8.herokuapp.com/api/paymentdetail ---> GET
+
+--------------------------------------------------------------------------------------------
+# untuk created data ke dalam database
+https://finalproject1ocbch8.herokuapp.com/api/paymentdetail ---> POST
+{
+  "paymentDetailId": 0,
+  "cardOwnerName": "string",
+  "cardNumber": "string",
+  "expirationDate": "string",
+  "securityCode": "string"
+}
+--------------------------------------------------------------------------------------------
+# Untuk ambil data sesuai parameter ID
+https://finalproject1ocbch8.herokuapp.com/api/paymentdetail/{id}  ---> GET By ID
+
+--------------------------------------------------------------------------------------------
+# Untuk update data sesuai parameter ID
+https://finalproject1ocbch8.herokuapp.com/api/paymentdetail/{id}  ---> PUT By ID
+{
+  "paymentDetailId": 0,
+  "cardOwnerName": "string",
+  "cardNumber": "string",
+  "expirationDate": "string",
+  "securityCode": "string"
+}
+--------------------------------------------------------------------------------------------
+# Untuk delete data dengan parameter ID data
+https://finalproject1ocbch8.herokuapp.com/api/paymentdetail/{id}  ---> DELETE By ID
+
+--------------------------------------------------------------------------------------------
+
+
+

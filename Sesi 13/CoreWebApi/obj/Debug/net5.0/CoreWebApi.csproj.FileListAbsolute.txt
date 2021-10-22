@@ -22,7 +22,6 @@ D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\staticwebassets\CoreWebApi.StaticWeb
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\staticwebassets\CoreWebApi.StaticWebAssets.xml
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\scopedcss\bundle\CoreWebApi.styles.css
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\CoreWebApi.RazorTargetAssemblyInfo.cache
-D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\CoreWebApi.csproj.CopyComplete
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\CoreWebApi.dll
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\ref\CoreWebApi.dll
 D:\OCBC\Sesi 13\CoreWebApi\obj\Debug\net5.0\CoreWebApi.pdb
