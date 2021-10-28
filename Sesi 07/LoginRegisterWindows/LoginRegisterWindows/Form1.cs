@@ -50,6 +50,8 @@ namespace LoginRegisterWindows
             if (db.Count() == 1)
             {
                 MessageBox.Show("Success You will Login as " + db.Results(0, "names"));
+                Form2 kontakk = new Form2();
+                kontakk.Show();
             }
             else
             {
